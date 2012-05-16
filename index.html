@@ -10,7 +10,7 @@
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript">
-		$(function (){
+		$(window).load(function (){
 			$('table tr:odd').addClass('odd');
 			
 			$('table tr').hover(function (){
@@ -20,22 +20,41 @@
 			});
 			
 			// Колонки 1 высоты
-			var def_height       = 0,
-				def_height_block = 0;
+			var dhh   = 0,
+				dhb  = 0;
 			
-			$('article.columns .column').each(function (){
-				var height       = $('.ads-top-info', $(this)).height(),
-					height_block = $(this).height();
-				
-				if (def_height < height)
-				{
-					def_height 		 = height;
-					def_height_block = height_block;
-				}
+			$('.top-blocks .column').each(function (){
+				var self = $(this);
+                
+                if($('.ads-top-info', self).length > 0)
+                {
+                    dhh  = ($('.ads-top-info', self).height() > dhh ? $('.ads-top-info', self).height() : dhh);
+                }
+                
+                dhb = (self.height() > dhb ? self.height() : dhb);
 			});
 			
-			$('.ads-top-info').css('min-height', def_height);
-			$('article.columns .column-in').css('min-height', def_height_block - 2);
+            // Выравнивание шапки
+            $('.ads-top-info').css('min-height', dhh);
+            
+            // Выравнивание блока
+            $('.top-blocks .column-in').css('min-height', dhb-2);
+            
+            dhh = 0;
+            
+			$('.bottom-blocks .column').each(function (){
+				var self = $(this);
+                
+                if($('.ads-top-info', self).length > 0)
+                {
+                    dhh  = ($('.ads-top-info', self).height() > dhh ? $('.ads-top-info', self).height() : dhh);
+                }
+                
+                dhb = (self.height() > dhb ? self.height() : dhb);
+			});
+
+            // Выравнивание блока
+            $('.bottom-blocks .column-in').css('min-height', dhb-2);
             
             // Блоки объявлений при наведении
             $('.ads-scroll .column').hover(function (){
@@ -43,8 +62,6 @@
             }, function (){
                 $(this).removeClass('hover');
             });
-            
-            $('.ads-scroll .column.hover .column-in').attr('hideFocus', false).css("outline", "4px solid #acdfee");
 		});
 	</script>
 	
@@ -116,9 +133,15 @@
 						<div class="scroller"></div>
 						<nav>
 							<ul>
-								<?php for ($i = 1; $i <= 9; $i++) { ?>
-								<li <?=($i == 1 ? 'class="first-child"' : '')?><?=($i == 9 ? 'class="last-child"' : '')?>><span><?=$i;?></span></li>
-								<?php } ?>
+								<li class="first-child"><span>1</span></li>
+								<li><span>2</span></li>
+								<li><span>3</span></li>
+								<li><span>4</span></li>
+								<li><span>5</span></li>
+								<li><span>6</span></li>
+								<li><span>7</span></li>
+								<li><span>8</span></li>
+								<li class="last-child"><span>9</span></li>
 							</ul>
 						</nav>
 					</div>
@@ -232,7 +255,7 @@
 				</article>
 				
 				<!-- Колонки -->
-				<article class="columns clearfix">
+				<article class="columns top-blocks clearfix">
 					<div class="column">
 						<div class="column-in">
 							<div class="ads-top-info">
@@ -269,7 +292,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column last">
+					<div class="column">
 						<div class="column-in">
 							<h1><a href="">Важно знать!</a></h1>
 							<ul>
@@ -319,7 +342,7 @@
 					</div>
 					<div class="clear"></div>
 					
-					<table>
+					<table width="100%">
 						<tr>
 							<th width="50">Рейс</th>
 							<th>Маршрут</th>
@@ -327,15 +350,41 @@
 							<th width="100">Прибытие</th>
 							<th width="60">В пути</th>
 						</tr>
-						<?php for($i = 1; $i <= 5; $i++) { ?>
 						<tr>
-							<td class="reys"><small>№</small> <big><?=$i;?></big></td>
+							<td class="reys"><small>№</small> <big>1</big></td>
 							<td><a href="">Юбилейный — Хлебокомбинат</a></td>
 							<td>13:00</td>
 							<td>16:00</td>
 							<td>3:00</td>
 						</tr>
-						<?php } ?>
+                        <tr>
+							<td class="reys"><small>№</small> <big>1</big></td>
+							<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+							<td>13:00</td>
+							<td>16:00</td>
+							<td>3:00</td>
+						</tr>
+                        <tr>
+							<td class="reys"><small>№</small> <big>1</big></td>
+							<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+							<td>13:00</td>
+							<td>16:00</td>
+							<td>3:00</td>
+						</tr>
+                        <tr>
+							<td class="reys"><small>№</small> <big>1</big></td>
+							<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+							<td>13:00</td>
+							<td>16:00</td>
+							<td>3:00</td>
+						</tr>
+                        <tr>
+							<td class="reys"><small>№</small> <big>1</big></td>
+							<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+							<td>13:00</td>
+							<td>16:00</td>
+							<td>3:00</td>
+						</tr>
 					</table>
 				</article>
 			</div>
@@ -370,7 +419,7 @@
 										<p>Требуется продавец<br />
 										в детский магазин</p>
 										<span class="cost">15 000 р. / месяц</span>
-										<img src="images/ads/small/1.png" alt="" />
+										<img src="images/ads-noimage.png" alt="" />
 										<div class="ads-info">
 											<p>Окрас: черный и тигровый.<br/>
 											Обращаться по телефонам:<br />
@@ -425,12 +474,9 @@
 				<div class="ads-bot"></div>
 			</article>
 			
-			<!-- Рекламный блок -->
-			<article class="reclame-block"></article>
-			
 			<!-- Разделительный блок -->
 			<div class="container">
-				<article class="columns clearfix">
+				<article class="columns bottom-blocks clearfix">
 					
 					<!-- Отдых -->
 					<div class="column">
@@ -504,7 +550,7 @@
 					
 					<div class="column last">
 						<div class="column-in">
-							<div class="ads-top-info">
+							<div class="ads-top">
 								<h1><a href="">Объявления</a> <span class="date">19.02</span></h1>
 								<h2><a href="">Новый газон за пол часа!</a></h2>
 							</div>

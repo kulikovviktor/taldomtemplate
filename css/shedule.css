@@ -1,0 +1,251 @@
+.main-content .shedule-bus
+{
+	height: 100%;
+	margin: 0 0 40px;
+}
+
+	.main-content .shedule-bus h1, .main-content .shedule-train h1
+	{
+		background-color: #247588;
+		background-image: -moz-linear-gradient(top, #2a8395, #1c6679);
+		color: #ffffff;
+		height: 54px;
+		line-height: 54px;
+		margin: 0;
+		padding: 0 0 0 57px;
+		position: relative;
+	}
+
+	.shedule-bus-info, .shedule-train-info
+	{
+		background: url(../images/bg-shedule.png) repeat scroll 0 0;
+		margin: 0 0 12px;
+		overflow: hidden;
+		padding: 20px 0 20px 29px;
+	}
+
+		.shedule-bus-info h2, .shedule-train-info h2
+		{
+			font-size: 16px;
+			margin: 0 0 11px;
+		}
+		
+			.shedule-bus-info h2 a, .shedule-train-info h2 a
+			{
+				color: #ffffff;
+			}
+			
+		.shedule-bus-info .columns, .shedule-train-info .columns
+		{
+			height: 100%;
+			width: auto;
+		}
+		
+			.shedule-bus-info .columns .column, .shedule-train-info .columns .column
+			{
+				margin: 0;
+				
+				width: 200px;
+			}
+			
+				.shedule-bus-info .columns .column-in, .shedule-train-info .columns .column-in
+				{
+					border: none;
+					min-height: 50px;
+					
+					margin: 0 15px 0 0;
+				}
+				
+					.shedule-bus-info .columns .column label, .shedule-train-info .columns .column label
+					{
+						color: #ffffff;
+						display: block;
+						font-size: 11px;
+						padding: 0 0 8px 12px;
+					}
+					
+					.shedule-bus-info .select, .shedule-train-info .select
+					{
+						background: #fff;
+						border: 1px solid #7e9eb7;
+						color: #424242;
+						font-size: 13px;
+						padding: 4px 4px 4px 6px;
+						position: relative;
+						width: 174px;
+					}
+				
+					.shedule-bus-info select, .shedule-train-info select
+					{
+						background: #fff;
+						border: none;
+						padding: 0;
+						width: 100%;
+					}
+					
+					.shedule-bus-info .select.normal, .shedule-train-info .select.normal
+					{
+						float: left;
+						margin: 0 10px 0 0;
+						width: 317px;
+					}
+					
+					.btn-white
+					{
+						background: -webkit-linear-gradient(top, #e5e5e5, #fff);
+						background: -moz-linear-gradient(top, #e5e5e5, #fff);
+						background: -ms-linear-gradient(top, #e5e5e5, #fff);
+						background: -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5e5e5, endColorstr=#ffffff)";
+						background: -o-linear-gradient(top, #e5e5e5, #fff);
+						background: linear-gradient(top, #e5e5e5, #fff);
+						border: 1px solid #e9eeef;
+						color: #1d1d1d;
+						cursor: pointer;
+						
+						/* box shadow */
+						-webkit-box-shadow: 1px 1px 1px #1e7c90;
+						   -moz-box-shadow: 1px 1px 1px #1e7c90;
+								box-shadow: 1px 1px 1px #1e7c90;
+						
+						float: left;
+						height: 28px;
+						line-height: 18px;
+						margin: 0 10px 0 0;
+						padding: 0 5px;
+						position: relative;
+						text-decoration: none;
+					}
+					
+					.extend-search
+					{
+						border-bottom: 1px dotted #ffffff;
+						color: #ffffff;
+						float: left;
+						font-size: 13px;
+						margin: 5px 0 0;
+						position: relative;
+						text-decoration: none;
+					}
+					
+					.extend-search:hover
+					{
+						color: #ffffff;
+					}
+					
+						.extend-search .arrow
+						{
+							border-color: transparent transparent #ffffff;
+							border-style: solid;
+							border-width: 0 4px 4px;
+							height: 0;
+							position: absolute;
+							right: -14px;
+							top: 8px;
+							width: 0;
+						}
+						
+	.shedule-sort
+	{
+		border-bottom: 1px solid #e5e5e5;
+		padding: 0 0 15px;
+		text-align: center;
+	}
+
+		.shedule-sort p
+		{
+			color: #424242;
+			display: inline-block;
+			padding: 0;
+		}
+		
+			.shedule-sort p a
+			{
+				border-bottom: 1px dotted #424242;
+				color: #424242;
+				font-size: 13px;
+				position: relative;
+				text-decoration: none;
+			}
+			
+			.shedule-sort p a.from, .shedule-sort p a.to
+			{
+				display: inline-block;
+			}
+			
+			.shedule-sort p a.from
+			{
+				border-style: solid;
+				border-width: 0 0 1px;
+				font-weight: bold;
+				margin: 0 0 0 40px;
+			}
+			
+			.shedule-sort p a.to
+			{
+				margin: 0 0 0 5px;
+			}
+			
+				.shedule-sort p .arrow
+				{
+					border-color: #424242 transparent transparent;
+					border-style: solid;
+					border-width: 3px 3px 0;
+					height: 0;
+					position: absolute;
+					right: -12px;
+					top: 8px;
+					width: 0;
+				}
+				
+	table
+	{
+		float: left;
+	}
+	
+		table th .course
+		{
+			margin: 0 0 0 13px;
+		}
+		
+		table th .flight
+		{
+			float: right;
+			margin: 0 14px 0 0;
+		}
+		
+		table th:first-child, table td:first-child
+		{
+			padding: 10px 0 10px 18px;
+		}
+	
+	table.fixed
+	{
+		float: none;
+		width: 100%;
+	}
+
+	table.right
+	{
+		float: right;
+	}
+				
+	table td.reys small
+	{
+		font-size: 12px;
+	}
+
+	table td.reys big
+	{
+		font-size: 17px;
+	}
+
+		table tr a
+		{
+			font-size: 12px;
+		}
+
+	table td
+	{
+		font-size: 12px;
+		padding: 0;
+	}

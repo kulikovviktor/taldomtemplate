@@ -58,9 +58,14 @@ footer a:hover
 	color: #fff;
 }
 
-footer .sub-menu a, footer .sub-menu a:hover
+footer .sub-menu a
 {
 	color: #a9a9a9;
+}
+
+footer .sub-menu a:hover
+{
+	color: #c9c9c9;
 }
 
 /* Заголовки */
@@ -156,7 +161,7 @@ body
 			height: 89px;
 			margin: 0 auto;
 			position: relative;
-			width: 960px;
+			width: 982px;
 		}
 		
 			hgroup .logo
@@ -172,15 +177,13 @@ body
 			{
 				float: right;
 				margin: 30px 0 0;
-				width: 410px;
+				width: 415px;
 			}
 			
 				/* Блок с авторизацией и регистрацией */
 				hgroup .auth-block .login
 				{
 					float: right;
-					margin: 0 -15px 0 0;
-					width: 190px;
 				}
 				
 					hgroup .auth-block .login ul
@@ -313,7 +316,7 @@ body
 		header nav
 		{
 			margin: 0 auto;
-			width: 960px;
+			width: 982px;
 		}
 		
 			header nav ul
@@ -373,17 +376,17 @@ body
 						}
 	
 	/* Основной контейнер только для главной страницы */
-	.main-page
+	.main-page, .main-page.page
 	{
 		background: url(../images/footer-shadow.png) repeat-x scroll 0 100%;
 		padding: 0 0 25px;
 		position: relative;
 	}
-	
-		.main-page .container
+
+		.main-page.container, .container
 		{
 			margin: 0 auto;
-			width: 960px;
+			width: 982px;
 		}
 	
 			.main-page article
@@ -615,7 +618,7 @@ body
 					height: 54px;
 					margin: 1px 0;
 					position: relative;
-					width: 957px;
+					width: 979px;
 				}
 				
 					.main-page article.blogs .weather-block .column
@@ -628,7 +631,7 @@ body
 					.main-page article.blogs .weather-block .column.today
 					{
 						background: #cee4ee;
-						width: 337px;
+						width: 345px;
 					}
 					
 						.main-page article.blogs .weather-block .column.today .morning, .main-page article.blogs .weather-block .column.today .night,
@@ -749,17 +752,17 @@ body
 					
 					.main-page article.blogs .weather-block .column.next-day
 					{
-						width: 210px;
+						width: 220px;
 					}
 					
 					.main-page article.blogs .weather-block .column.next-two-day
 					{
-						width: 185px;
+						width: 195px;
 					}
 					
 					.main-page article.blogs .weather-block .column.last-day
 					{
-						width: 206px;
+						width: 215px;
 					}
 					
 					.main-page article.blogs .weather-block .column.last-day:after
@@ -928,7 +931,7 @@ body
 			.columns
 			{
 				margin: 0 0 25px;
-				width: 960px;
+				width: 982px;
 			}
 			
 				.columns .column
@@ -936,7 +939,7 @@ body
 					float: left;
 					margin: 0 21px 0 0;
 					position: relative;
-					width: 306px;
+					width: 313px;
 				}
 				
 					.columns .column-in
@@ -958,6 +961,11 @@ body
 							margin: 0 0 15px;
 							padding: 0 0 20px;
 							height: 100%;
+						}
+						
+						.columns ul li:last-child
+						{
+							border: none;
 						}
 						
 							.columns ul li .date
@@ -1005,7 +1013,6 @@ body
 							.ads-block img
 							{
 								display: block;
-								max-width: 304px;
 							}
 							
 							.ads-info
@@ -1054,7 +1061,7 @@ body
 									text-decoration: none;
 								}
 					
-				.columns .column.last
+				.columns .column:last-child
 				{
 					margin: 0;
 				}
@@ -1124,7 +1131,7 @@ body
 								width: 14px;
 							}
 							
-							.shedule ul li.bus a .black, .shedule ul li.bus a .white
+							.shedule ul li.bus a .black, .shedule ul li.bus a .white, .shedule-bus h1 .black, .shedule-bus h1 .white
 							{
 								background: url(../images/icons/bus.png) no-repeat scroll 0 0;
 								height: 21px;
@@ -1134,7 +1141,14 @@ body
 								width: 17px;
 							}
 							
-							.shedule ul li.train a .white, .shedule ul li.bus a .white
+							.shedule-bus h1 .black, .shedule-bus h1 .white
+							{
+								left: 30px;
+								right: auto;
+								top: 17px;
+							}
+							
+							.shedule ul li.train a .white, .shedule ul li.bus a .white, .shedule-train h1 .white, .shedule-bus h1 .white
 							{
 								background-position: 0 100%;
 							}
@@ -1190,51 +1204,50 @@ body
 							width: 99%;
 						}
 					
-					.shedule table
+					table
 					{
 						border-collapse: collapse;
 						border-spacing: 0;
 						margin: 20px 0 0;
-						width: 100%;
 					}
 					
-						.shedule table tr
+						table tr
 						{
 							background: #fff;
 						}
 						
-						.shedule table tr.odd
+						table tr.odd
 						{
-							background: #eaf4f6;
+							background: #f2f2f2;
 						}
 						
-						.shedule table tr.hover
+						table tr.hover
 						{
 							background: #45bdd3;
 						}
 						
-							.shedule table tr a
+							table tr a
 							{
 								display: block;
 								padding: 4px 0 0;
 							}
 						
-							.shedule table tr.hover a, .shedule table tr.hover td, .shedule table tr.hover td.reys small, .shedule table tr.hover td.reys big
+							table tr.hover a, table tr.hover td, table tr.hover td.reys small, table tr.hover td.reys big
 							{
 								color: #fff;
 							}
 					
-							.shedule table th, .shedule table td
+							table th, table td
 							{
 								text-align: left;
 							}
 							
-							.shedule table th:first-child, .shedule table td:first-child
+							table th:first-child, table td:first-child
 							{
 								padding: 10px 0 10px 28px;
 							}
 							
-							.shedule table th
+							table th
 							{
 								background: #fff;
 								color: #979797;
@@ -1242,7 +1255,7 @@ body
 								font-weight: normal;
 							}
 							
-							.shedule table td
+							table td
 							{
 								color: #4d4d4d;
 								font-family: Georgia;
@@ -1250,13 +1263,13 @@ body
 								padding: 10px 0;
 							}
 							
-							.shedule table td.reys small
+							table td.reys small
 							{
 								color: #424242;
 								font-size: 13px;
 							}
 							
-							.shedule table td.reys big
+							table td.reys big
 							{
 								color: #424242;
 								font-size: 22px;
@@ -1281,7 +1294,7 @@ body
 					{
 						margin: 0 auto 28px;
 						position: relative;
-						width: 960px;
+						width: 982px;
 					}
 					
 						.left-arr, .right-arr
@@ -1353,9 +1366,9 @@ body
 									}
 									
 									.ads-scroll .column-in img
-									{
+									{	
+										display: block;
 										margin: 20px 0 0;
-										max-width: 190px;
 									}
 									
 									.ads-scroll .column-in .ads-info
@@ -1557,6 +1570,91 @@ body
 											width: 86px;
 										}
 										
+	/* Контейнер для статических страниц */
+	.main-page.page
+	{
+		padding: 0 0 40px;
+	}
+	
+		/* Правый блок */
+		.main-content
+		{
+			float: left;
+			width: 648px;
+		}
+		
+			
+		
+		/* Правый блок */
+		.sidebar
+		{
+			float: right;
+			width: 311px;
+		}
+		
+			.sidebar section
+			{
+				margin: 0 0 23px;
+			}
+			
+			.sidebar .mobile-version
+			{
+				background: #daebf1;
+				height: 54px;
+				line-height: 54px;
+				text-align: center;
+			}
+			
+				.sidebar .mobile-version a
+				{
+					font-size: 15px;
+				}
+				
+			.sidebar .news
+			{
+				border: 1px solid #e6e6e6;
+				padding: 16px 27px;
+			}
+			
+				.news-post
+				{
+					border-bottom: 1px dashed #e1e1e1;
+					margin: 0 0 19px;
+					padding: 0 0 9px;
+				}
+				
+				.news-post.last-child
+				{
+					border: none;
+					margin: 0;
+				}
+			
+					.sidebar .news h2
+					{
+						float: left;
+						font-family: Arial;
+						font-size: 12px;
+						width: 180px;
+					}
+					
+					.sidebar .news .date
+					{
+						float: right;
+						font-size: 25px;
+					}
+					
+					.news-entry
+					{
+						clear: both;
+						margin: 10px 0 0;
+						overflow: hidden;
+					}
+					
+					.sidebar .news .btn-all
+					{
+						margin: 0;
+					}
+										
 	/* Footer */
 	footer
 	{
@@ -1567,7 +1665,7 @@ body
 		.footer-in
 		{
 			margin: 0 auto;
-			width: 960px;
+			width: 982px;
 		}
 		
 			footer menu
@@ -1578,7 +1676,7 @@ body
 				footer menu ul
 				{
 					list-style: none;
-					width: 960px;
+					width: 912px;
 				}
 				
 					footer menu ul li
@@ -1591,6 +1689,11 @@ body
 						{
 							background: none;
 							padding-left: 0;
+						}
+						
+						footer menu ul li:last-child a
+						{
+							padding-right: 0;
 						}
 					
 						footer menu ul li a

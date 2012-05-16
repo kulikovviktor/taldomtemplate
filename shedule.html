@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Taldom Северная сторона подмосковья</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/fonts.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/shedule.css" media="all" />
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function (){
+			$('table > tbody > tr:even').addClass('odd');
+			
+			$('table tr').hover(function (){
+				$(this).addClass('hover');
+			}, function (){
+				$(this).removeClass('hover');
+			});
+		});
+	</script>
+	
+	<!-- html5.js for IE less than 9 -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+    <!--[if lte IE 8]>
+    	<link rel="stylesheet" type="text/css" href="css/ie8.css" media="all" />
+    <![endif]-->
+</head>
+<body>
+	<div id="layout">
+		
+		<!-- Шапка -->
+		<header>
+			<hgroup>
+				<a href="" class="logo"></a>
+				
+				<!-- Блок с авторизацией -->
+				<div class="auth-block">
+					<div class="soc">
+						<div class="soc-in">
+							<span>Войти при помощи</span>
+							<ul>
+								<li class="fb"><a href=""></a></li>
+								<li class="vk"><a href=""></a></li>
+								<li class="gplus"><a href=""></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="login">
+						<ul>
+							<li class="auth"><a href="">Авторизация</a></li>
+							<li class="reg"><a href="">Регистрация</a></li>
+						</ul>
+					</div>
+				</div>
+			</hgroup>
+			<!-- Навигация -->
+			<nav class="meta-ot-b">
+				<ul>
+					<li class="home"><a href="/"></a></li>
+					<li class="first-child"><a href="">Блоги</a></li>
+					<li class="active"><a href="">Справочник</a></li>
+					<li><a href="">Объявления</a></li>
+					<li><a href="">Афиша</a></li>
+					<li><a href="">Недвижимость</a></li>
+					<li><a href="">Города</a></li>
+					<li class="last-child"><a href="">Отдых</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+        <div class="main-page page">
+            <!-- Разделительный блок -->
+            <div class="container clearfix">
+                <aside class="main-content">
+                    
+                    <!-- Расписание автобусов -->
+                    <article class="shedule-bus clearfix">
+                        <h1>Расписание автобусов <span class="white"></span></h1>
+                        <div class="shedule-bus-info">
+                            <h2><a href="">Куда вы направляетесь?</a></h2>
+                            <div class="columns clearfix">
+                                <div class="column">
+                                    <div class="column-in">
+                                        <label for="">Откуда</label>
+                                        <div class="select">
+											<select name="" id="">
+												<option value="">Выберите станцию</option>
+											</select>
+										</div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="column-in">
+                                        <label for="">Куда</label>
+                                        <div class="select">
+											<select name="" id="">
+												<option value="">Выберите станцию</option>
+											</select>
+										</div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="column-in">
+                                        <label for="">Когда</label>
+                                        <div class="select">
+											<select name="" id="">
+												<option value="">Выберите дату</option>
+											</select>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2><a href="">Поиск маршута по остановке:</a></h2>
+                            <div class="select normal">
+								<select name="" id="">
+									<option value="">Название остановки</option>
+								</select>
+							</div>
+                            <input class="btn-white" type="submit" value="Найти" />
+                            <a href="" class="extend-search">Расширенный поиск <span class="arrow"></span></a>
+                        </div>
+                        
+                        <!-- Сортировка -->
+                        <div class="shedule-sort">
+                            <p>Сортировать: <a href="">по остановкам <span class="arrow"></span></a></p>
+                        </div>
+                        
+                        <!-- Табличка -->
+                        <table width="318px">
+							<thead>
+							<tr>
+								<th colspan="3"><span>Рейс</span> <span class="course">Маршрут</span> <span class="flight">Ближайший рейс</span></th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="reys" width="40"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td width="50">13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+							</tbody>
+                        </table>
+						
+						<table class="right" width="318px">
+							<thead>
+							<tr>
+								<th colspan="3"><span>Рейс</span> <span class="course">Маршрут</span> <span class="flight">Ближайший рейс</span></th>
+							</tr>
+							</thead>
+							<colgroup>
+								<col width="50"></col>
+								<col></col>
+								<col width="50"></col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="reys" width="40"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td width="50">13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+							</tbody>
+                        </table>
+                        
+                    </article>
+					
+					<!-- Расписание электричек -->
+					<article class="shedule-train">
+					
+						<h1>Расписание электричек <span class="white"></span></h1>
+                        <div class="shedule-train-info">
+                            <h2><a href="">Поиск маршута по остановке:</a></h2>
+                            <div class="select normal">
+								<select name="" id="">
+									<option value="">Название остановки</option>
+								</select>
+							</div>
+                            <input class="btn-white" type="submit" value="Найти" />
+                            <a href="" class="extend-search">Расширенный поиск <span class="arrow"></span></a>
+                        </div>
+                        
+                        <!-- Сортировка -->
+                        <div class="shedule-sort">
+                            <p>Сортировать: <a href="">по станциям <span class="arrow"></span></a> <a href="" class="from">Из Москвы</a> <a href="" class="to">В Москву</a></p>
+                        </div>
+                        
+                        <!-- Табличка -->
+                        <table class="fixed">
+							<thead>
+							<tr>
+								<th colspan="3"><span>Рейс</span> <span class="course">Маршрут</span> <span class="flight">Ближайший рейс</span></th>
+							</tr>
+							</thead>
+							<colgroup>
+								<col width="50"></col>
+								<col></col>
+								<col width="50"></col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="reys" width="40"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td width="50">13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+								<tr>
+									<td class="reys"><small>№</small> <big>1</big></td>
+									<td><a href="">Юбилейный — Хлебокомбинат</a></td>
+									<td>13:00</td>
+								</tr>
+							</tbody>
+                        </table>
+						
+					</article>
+                    
+                </aside>
+                <aside class="sidebar">
+                    
+					<!-- Версия для мобильных -->
+					<section class="mobile-version">
+						<a href="">Версия для мобильных телефонов</a>
+					</section>
+					
+					<!-- Микроблог -->
+					<section class="news">
+						<h1><a href="">Микроблок транспорта</a></h1>
+						
+						<div class="news-post">
+							<h2><a href="">Уважаемые жители и гости<br />Талдомского района!</a></h2>
+							<span class="date">06.07</span>
+							<div class="news-entry">
+								<p>С 1 января 2012 года в т.н. "маршрутных такси" (автобусы Мерседес Спринтер, работающие  на коммерческих маршрутах<br />
+								№ 1, № 3, № 4, № 21, № 22, № 25, № 27,<br />
+								№ 28 и № 37) будут предоставляться меры социальной поддержки отдельным категорям граждан. </p>
+							</div>
+						</div>
+						<div class="news-post last-child">
+							<h2><a href="">Расписание городских, приго-<br />родных и междугородних автобусных рейсов</a></h2>
+							<span class="date">06.07</span>
+							<div class="news-entry">
+								<p>С 1 января 2012 года в т.н. "маршрутных такси" (автобусы Мерседес Спринтер, работающие  на коммерческих маршрутах<br />
+								№ 1, № 3, № 4, № 21, № 22, № 25, № 27,<br />
+								№ 28 и № 37) будут предоставляться меры социальной поддержки отдельным категорям граждан. </p>
+							</div>
+						</div>
+						<a href="" class="btn-all">Весь микроблог</a>
+						
+					</section>
+					
+					<section class="reclame">
+						<img src="images/your-reclame.png" alt="" />
+					</section>
+					
+                </aside>
+            </div>
+        </div>
+		
+		<!-- Подвал -->
+		<footer>
+            <div class="footer-in">
+                <menu class="clearfix">
+                    <ul>
+                        <li>
+                            <a href="">Мобильный портал</a>
+                            <ul class="sub-menu">
+                                <li><a href="">ТВ-реклама</a></li>
+                                <li><a href="">Печтная реклама</a></li>
+                                <li><a href="">Наружняя реклама</a></li>
+                                <li><a href="">Баннеры</a></li>
+                                <li><a href="">Календарь</a></li>
+                                <li><a href="">Упаковка</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">О проекте</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Логотипы</a></li>
+                                <li><a href="">Слоганы</a></li>
+                                <li><a href="">Нейминг</a></li>
+                                <li><a href="">Анимация</a></li>
+                                <li><a href="">Брендинг</a></li>
+                                <li><a href="">Ребрендинг</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Сотрудничество и реклама</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Социальная реклама</a></li>
+                                <li><a href="">Запрещеная реклама</a></li>
+                                <li><a href="">Скандальная реклама</a></li>
+                                <li><a href="">Интерактивная реклама</a></li>
+                                <li><a href="">Celebrity marketing</a></li>
+                                <li><a href="">Контекстная реклама</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Техподдержка</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Креативные обзоры</a></li>
+                                <li><a href="">Статьи</a></li>
+                                <li><a href="">Школа рекламиста</a></li>
+                                <li><a href="">Любимые ролики</a></li>
+                                <li><a href="">Рейтинг Taldom</a></li>
+                                <li><a href="">Художники и арт-проекты</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">RSS</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Логотипы</a></li>
+                                <li><a href="">Слоганы</a></li>
+                                <li><a href="">Нейминг</a></li>
+                                <li><a href="">Анимация</a></li>
+                                <li><a href="">Брендинг</a></li>
+                                <li><a href="">Ребрендинг</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Segoe UI TTF</a>
+                        </li>
+                    </ul>
+                </menu>
+                
+                <div class="footer-text">
+                    <p><big>2008-2011. Проект "Народный портал Талдом.Org"</big>
+                    <small>При копировании материалов обязательна активная ссылка на www.taldom.org</small></p>
+                </div>
+                <div class="footer-img">
+                    <img src="images/footer-img.png" alt="" />
+                </div>
+                <div class="clear"></div>
+                
+                <p class="note">Профессионал-строй - Все виды ремонтных и отделочных работ за разумные деньги. | Каталог прямых ссылок InWind.ru | сайт о портовом городке Ванино, новости, фотоальбом, форум ванинцев, чат. | http://bezdoom.narod2.ru | Каталог сайтов | Добавьте Ваш сайт в Глобальный каталог сайтов! | Каталог сайтов | Создание сайтов - Веб дизайн, разработка сайтов, раскрутка сайтов в интернете, их продвижение, разработка фирменного стиля, реклама в интернете.</p>
+                
+            </div>
+        </footer>
+	</div>
+</body>
+</html>

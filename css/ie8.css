@@ -1,0 +1,25 @@
+header nav ul li a
+{
+	font-size: 15px;
+}
+
+.slide-info
+{
+	background-color: #f0f0f0;
+}
+
+	.slide-info h2
+	{
+		font-family: Arial;
+	}
+	
+.ads-info .btn
+{
+	background: #E5E5E5;
+}
+
+.buttons ul li, .shedule ul li
+{
+	display: inline;
+	zoom: 1;
+}
